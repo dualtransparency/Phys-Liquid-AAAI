@@ -1,0 +1,7 @@
+newmtl material_0
+Kd 1 1 1
+Ka 1 1 1
+Ks 0.4 0.4 0.4
+Ns 10
+illum 2
+map_Kd tmpdm17f283.png

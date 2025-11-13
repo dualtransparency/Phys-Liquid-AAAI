@@ -1,0 +1,1 @@
+{"_wandb":{"runtime":2503},"_step":99,"_timestamp":1.7307206699032722e+09,"Epoch":100,"Learning Rate":1.220703125e-08,"_runtime":2503.382367036,"Train Loss":0.0011877958400873466,"Val Loss":0.0011568837605106335,"Val Relative Error":0.8105396429697672,"Train Relative Error":1.1872749030590057}

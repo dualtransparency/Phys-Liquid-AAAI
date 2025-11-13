@@ -1,0 +1,458 @@
+/* 页面基础样式 */
+.gradio-container {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    /*font-size: 34px;*/
+    line-height: 150%;
+    text-align: center;
+    color: #000000;
+    background-color: #DFDDEE; /* 设置页面背景颜色 */
+}
+
+gradio-app {
+    background-color: #DFDDEE !important; /* 设置页面背景颜色 */
+}
+
+.gradio-container .prose p {
+    font-family: 'PingFang SC', 'Microsoft YaHei', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.panel {
+    background-color: #DFDDEE; /* 设置页面背景颜色 */
+    border: none;
+}
+
+.compact.svelte-vt1mxs, .panel.svelte-vt1mxs {
+    background: none;
+    border: none;
+}
+
+
+/* Navbar 样式 */
+.navbar {
+    background-color: #dfddee;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    padding: 19px 0px;
+    text-align: left;
+}
+
+.lab-title {
+    color: #000;
+    align-self: flex-start;
+    font: 600 28px PingFang SC, sans-serif;
+    padding-bottom: 14px;
+    border-bottom: 3px solid #000;
+}
+
+/* 页面头部样式 */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #DFDDEE; /* 设置页面背景颜色 */
+}
+
+.section-title, .experiment-title, .center-title {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 48px;
+    font-weight: 600;
+    color: #000;
+}
+
+.experiment-title {
+    font-size: 34px;
+    font-weight: 600;
+    color: #000;
+}
+
+.center-title {
+    font-size: 48px;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 纯文字按钮 */
+.nav-button {
+    font-family: 'PingFang SC', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 31px;
+    text-align: left;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button-left {
+    float: left;
+}
+
+.nav-button-right {
+    float: right;
+}
+
+/* 输入区域 */
+.input-container {
+    border-radius: 12px;
+    background-color: #f7f6fe;
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    flex-direction: row;
+    border: 2px solid #000000;
+    padding: 20px;
+}
+
+.input-row {
+    gap: 20px;
+    display: flex;
+}
+
+.input-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 59%;
+}
+
+/* 示例图像选择区域 */
+.scrollable-gallery {
+    overflow-x: auto;
+    white-space: nowrap;
+    display: flex;
+    gap: 10px;
+}
+
+.scrollable-gallery img {
+    max-height: 100%;
+    object-fit: contain;
+}
+
+/* 输出区域样式 */
+.output-container {
+    border-radius: 12px;
+    background-color: #f7f6fe;
+    display: flex;
+    margin-top: 20px;
+    width: 100%;
+    /*align-items: normal;*/
+    flex-direction: row;
+    border: 2px solid #000000;
+    /*height: 300px;*/
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+    padding: 20px;
+}
+
+.output-container.expanded {
+    height: auto;
+}
+
+.output-container-inner {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+.input-container-inner {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+}
+
+
+.output-header {
+    align-self: center;
+    display: flex;
+    max-width: 100%;
+    gap: 20px;
+    color: #000;
+    white-space: nowrap;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    font: 600 28px PingFang SC, sans-serif;
+}
+
+.output-content {
+    margin-top: 20px;
+}
+
+.output-row {
+    gap: 20px;
+    display: flex;
+}
+
+.output-column {
+    display: flex;
+    flex-direction: column;
+    line-height: normal;
+    width: 50%;
+    margin-left: 0px;
+}
+
+.output-image {
+    aspect-ratio: 1.78;
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    align-self: stretch;
+}
+
+.model-output {
+    color: #000;
+    text-align: center;
+    margin-top: 10px;
+    font: 600 34px PingFang SC, sans-serif;
+}
+
+/* 推理中按钮 */
+.button.loading {
+    position: relative;
+    background: linear-gradient(90deg, #ffca28, #ffb300);
+    color: #ffffff;
+    cursor: wait;
+}
+
+.button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 3px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+/* 裁剪设置 */
+.slider {
+    width: 100%;
+}
+
+/* 输入模块样式 */
+.dataset-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.dataset-header {
+    border-radius: 12px;
+    /*background-color: #dfddee;*/
+    display: flex;
+    width: 399px;
+    gap: 20px;
+    color: #000;
+    text-align: center;
+    justify-content: space-between;
+    padding: 9px 14px;
+    font: 600 20px PingFang SC, sans-serif;
+    border: 2px solid #000;
+}
+
+.image-grid {
+    margin-top: 22px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow-x: auto;
+    padding-bottom: 10px;
+}
+
+/* 额外样式 */
+.input-image {
+    aspect-ratio: 1.78;
+    object-fit: contain;
+    object-position: center;
+    width: 160px;
+    background-color: #d3d3d3;
+}
+
+/* 通用按钮样式 */
+.button {
+    display: inline-flex; /* 使用 Flexbox 布局以对齐文字和图标 */
+    align-items: center; /* 垂直居中对齐 */
+    justify-content: center; /* 水平居中对齐 */
+    gap: 8px; /* 文字与图标之间的间距 */
+    padding: 8px 16px; /* 内边距 */
+    font-size: 14px; /* 字体大小 */
+    font-weight: 500; /* 字体加粗 */
+    color: #fff; /* 文字颜色 */
+    background-color: #007bff; /* 背景颜色 */
+    border: none; /* 无边框 */
+    border-radius: 4px; /* 圆角效果 */
+    cursor: pointer; /* 鼠标悬停时显示手型 */
+    transition: background-color 0.2s ease, transform 0.2s ease; /* 平滑过渡效果 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
+}
+
+/* 基础按钮样式 */
+.button {
+    display: inline-block; /* 确保按钮不会填满父容器 */
+    padding: 12px 24px; /* 内边距 */
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(90deg, #651fff, #7c4dff); /* 渐变背景 */
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.06);
+    max-width: 200px; /* 设置最大宽度 */
+    text-align: center; /* 文字居中 */
+    margin: 40px auto; /* 水平居中 */
+}
+
+/* 鼠标悬停时的样式 */
+.button:hover {
+    background: linear-gradient(90deg, #8e24aa, #ab47bc);
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15), 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 按下时的样式 */
+.button:active {
+    background: linear-gradient(90deg, #512da8, #673ab7);
+    transform: scale(0.98);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 禁用状态 */
+.button:disabled {
+    background: #d1d1d1;
+    color: #a1a1a1;
+    cursor: not-allowed;
+    box-shadow: none;
+    transform: none;
+}
+
+/* 推理中状态 */
+.button.loading {
+    position: relative;
+    background: linear-gradient(90deg, #ffca28, #ffb300);
+    color: #ffffff;
+    cursor: wait;
+}
+
+.button.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 3px solid #ffffff;
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* 响应式设计 */
+
+/* 适配手机和平板 */
+@media (max-width: 1024px) {
+    .run-model-button {
+        width: 200px;
+        padding: 12px 55px;
+    }
+
+    .output-container {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .output-header {
+        width: 100%;
+    }
+
+    .section-title, .experiment-title, .center-title {
+        font-size: 40px;
+        padding: 30px 0;
+    }
+
+    .input-column {
+        width: 100%;
+    }
+
+    .input-container {
+        padding: 15px 5px;
+    }
+}
+
+/* 小屏幕优化（如手机） */
+@media (max-width: 768px) {
+    .run-model-button {
+        width: 100%;
+        padding: 10px 50px;
+        font-size: 16px;
+    }
+
+    .output-container {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .output-header {
+        width: 100%;
+    }
+
+    .section-title, .experiment-title, .center-title {
+        font-size: 32px;
+        padding: 20px 0;
+    }
+
+    .input-column {
+        width: 100%;
+    }
+
+    .image-grid {
+        flex-direction: column;
+    }
+}
+
+/* 极小屏幕（如小手机） */
+@media (max-width: 480px) {
+    .run-model-button {
+        font-size: 14px;
+        padding: 10px 40px;
+    }
+
+    .section-title, .experiment-title, .center-title {
+        font-size: 28px;
+    }
+}
